@@ -1,4 +1,6 @@
-<div class="column-layout group">
+
+
+<div class="column-layout group" *ngIf="!isLoginPage()">
   <igx-list class="list">
     <igx-list-item routerLink="/home">
       <span igxListThumbnail>
@@ -17,6 +19,12 @@
         <igx-avatar src="/assets/Store_Icon_Small.svg" class="avatar_1"></igx-avatar>
       </span>
       <span igxListLineTitle>Dashboard</span>
+    </igx-list-item>
+    <igx-list-item routerLink="/barcode">
+      <span igxListThumbnail>
+        <igx-avatar src="/assets/Inventory_Icon_Small.svg" class="avatar_1"></igx-avatar>
+      </span>
+      <span igxListLineTitle>Barcode</span>
     </igx-list-item>
     <igx-list-item routerLink="/products">
       <span igxListThumbnail>
@@ -50,7 +58,7 @@
     </igx-list-item>
   </igx-list>
   <div class="column-layout group_1">
-    <img src="/assets/InventoryMgmt_Logo.svg" class="image" />
+    <!-- <img src="/assets/InventoryMgmt_Logo.svg" class="image" /> -->
   </div>
 </div>
 <div class="view-container">

@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    debugger;
     this.inventoryAppService.getNewProductsList().pipe(takeUntil(this.destroy$)).subscribe(
       data => this.inventoryAppNewProducts = data
     );

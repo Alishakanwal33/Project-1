@@ -1,0 +1,7 @@
+<div class="scanner-container">
+  <zxing-scanner
+    [formats]="formats"
+    (scanSuccess)="onCodeResult($event)">
+  </zxing-scanner>
+</div>
+<p *ngIf="scannedCode">Scanned Code: {{ scannedCode }}</p>

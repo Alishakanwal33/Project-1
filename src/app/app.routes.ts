@@ -12,9 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { BarcodeComponent } from './barcode/barcode.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { RegistrationComponent } from './registration/registration.component';
+import { AppComponent } from './app.component';
 
+export const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'registration', component: RegistrationComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
+];
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
@@ -23,6 +29,14 @@ export const routes: Routes = [
     component: HomeComponent,
     data: {
       text: 'Home'
+    }
+  },
+
+  {
+    path: 'registration',
+    component: RegistrationComponent,
+    data: {
+      text: 'Registration'
     }
   },
   {

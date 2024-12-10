@@ -1,31 +1,39 @@
-<div class="container-fluid d-flex align-items-center justify-content-center vh-100" style="position: relative;">
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100 position-relative">
   <!-- Background Image -->
-  <div class="background-image" style="background-image: url('https://source.unsplash.com/1600x900/?grocery-store'); filter: blur(5px); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-size: cover; background-position: center;"></div>
+  <div class="background-image position-absolute w-100 h-100" style="background-image: url('https://source.unsplash.com/1600x900/?grocery-store'); filter: blur(7px); background-size: cover; background-position: center; z-index: -1;"></div>
 
   <!-- Gradient Overlay -->
-  <div class="gradient-overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+  <div class="gradient-overlay position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
 
-  <!-- Login Form -->
-  <div class="card p-4 shadow-lg" style="max-width: 400px; width: 100%; border-radius: 15px; background-color: rgba(255, 255, 255, 0.9);">
-    <h2 class="website-name text-center mb-3" style="font-family: 'Playfair Display', serif; font-weight: 700;">NextGen Convenience Store</h2>
-    <h4 class="text-center mb-4">Welcome back!</h4>
-    <p class="text-center mb-4" style="font-size: 0.9rem;">The faster you fill up, the faster you get a ticket</p>
-
+  <!-- Login Form Card -->
+  <div class="card p-5 shadow-lg" style="max-width: 400px; width: 100%; border-radius: 20px; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); z-index: 1;">
+    <h2 class="website-name text-center mb-3" style="font-family: 'Playfair Display', serif; font-weight: bold; color: #4facfe;">Smart Shopping</h2>
+    <div class="login-card">
     <form (ngSubmit)="onSubmit()">
       <div class="form-group mb-3">
+        <div class="logo">
+          <!-- Logo Image -->
+          <img src="https://cdn.vectorstock.com/i/1000v/14/51/smart-mart-icon-s-typography-logo-vector-45351451.jpg" alt="Smart Mart Logo">
+        </div>
         <label for="email" class="form-label">Email:</label>
-        <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required class="form-control">
+        <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required class="form-control shadow-sm">
       </div>
       <div class="form-group mb-3">
         <label for="password" class="form-label">Password:</label>
-        <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Enter your password" required class="form-control">
+        <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Enter your password" required class="form-control shadow-sm">
       </div>
       <div class="form-group form-check mb-3">
         <input type="checkbox" class="form-check-input" id="remember">
         <label class="form-check-label" for="remember">Remember me</label>
       </div>
-      <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
-      <p *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</p>
+      <button type="submit" class="btn btn-primary w-100 mb-3 shadow-sm" style="background: linear-gradient(135deg, #4facfe, #00f2fe); border: none;">Login</button>
+      <p *ngIf="errorMessage" class="alert alert-danger mt-3 text-center" style="font-size: 0.9rem;">{{ errorMessage }}</p>
+      <div class="text-center mt-3">
+        <p>Don’t have an account?</p>
+        <a (click)="register()" class="btn btn-secondary w-100 shadow-sm" style="background-color: #007bff; color: white; border: none;">
+          Register
+        </a>
+      </div>
     </form>
-  </div>
+  </div>
 </div>

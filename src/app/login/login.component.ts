@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { NgIf } from '@angular/common'; // Import NgIf from CommonModule
-import { FormsModule } from '@angular/forms'; 
+import { NgIf } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { User } from '../models/User';
 
@@ -10,7 +10,7 @@ import { User } from '../models/User';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   standalone: true,
-  imports: [NgIf,FormsModule],
+  imports: [NgIf, FormsModule]
 })
 export class LoginComponent {
   email: string = '';
@@ -22,16 +22,21 @@ export class LoginComponent {
     private route: ActivatedRoute,
     public router: Router,
     private authService: AuthService
-  ){
+  ) {}
 
-  }
- 
   onSubmit() {
-    debugger;
-    console.log(123);
+    console.log('Login attempt:', this.email, this.password);
     this.user.userName = this.email;
     this.user.password = this.password;
-    
+/*
+    if (this.email === "superadmin" && this.password === "abc123") {
+      this.router.navigate(['/home']);
+    } else {
+      this.errorMessage = 'Invalid username or password';
+    }
+*/
+    // Uncomment and use this section to integrate with the AuthService when needed
+   debugger
     this.authService.login(this.user).subscribe(
       (response) => {
         this.router.navigate(['/home']);
@@ -46,12 +51,9 @@ export class LoginComponent {
         console.error(error);
       }
     );
-    // if (this.email === 'admin@example.com' && this.password === '123') {
-
-    //   this.router.navigate(['/home']);
-    //   alert('Login successful!');
-    // } else {
-    //   this.errorMessage = 'Invalid email or password';
-    // }
+    
+  }
+  register(){
+    this.router.navigate(['/registration'])
   }
 }

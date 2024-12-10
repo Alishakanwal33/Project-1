@@ -38,3 +38,4 @@ export class SalesComponent implements OnInit, OnDestroy {
     this.eCommerceService.revenue.next(event.newValue as RevenueType[]);
   }
 }
+

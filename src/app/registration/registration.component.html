@@ -1,0 +1,41 @@
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100 position-relative">
+  <!-- Background Image -->
+  <div class="background-image position-absolute w-100 h-100" style="background-image: url('https://source.unsplash.com/1600x900/?grocery-store'); filter: blur(7px); background-size: cover; background-position: center; z-index: -1;"></div>
+
+  <!-- Gradient Overlay -->
+  <div class="gradient-overlay position-absolute w-100 h-100" style="background: rgba(0, 0, 0, 0.5);"></div>
+
+  <!-- Login Form Card -->
+  <div class="card p-5 shadow-lg" style="max-width: 400px; width: 100%; border-radius: 20px; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px); z-index: 1;">
+    <h2 class="website-name text-center mb-3" style="font-family: 'Playfair Display', serif; font-weight: bold; color: #4facfe;">Smart Shopping</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username">Username</label>
+    <input id="username" type="text" [(ngModel)]="user.userName" name="username" required minlength="3">
+    <div *ngIf="user.userName.length > 0 && user.userName.length < 3">
+      Username must be at least 3 characters.
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" type="email" [(ngModel)]="user.email" name="email" required>
+    <div *ngIf="user.email && !user.email.includes('@')">
+      Invalid email address.
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input id="password" type="password" [(ngModel)]="user.password" name="password" required minlength="6">
+    <div *ngIf="user.password.length > 0 && user.password.length < 6">
+      Password must be at least 6 characters.
+    </div>
+  </div>
+
+  <button type="submit">Register</button>
+  <p *ngIf="errorMessage" class="alert alert-danger mt-3 text-center" style="font-size: 0.9rem;">{{ errorMessage }}</p>
+</form>
+</div>
+</div>
+

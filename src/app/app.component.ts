@@ -17,7 +17,7 @@ export class AppComponent {
 
   isAuthPage(): boolean {
     // Check if the current URL is either '/login' or '/register'
-    return this.router.url === '/login' || this.router.url === '/registration';
+    return this.router.url === '/login' || this.router.url === '/registration' || this.router.url === '/forgot-password';
   }
   // isLoginPage(): boolean {
   //   return this.router.url === '/login';  // Check if the current URL is the login page

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { OrdersType } from '../models/northwind/orders-type';
-import { Northwind } from '../static-data/northwind';
+import { OrdersType } from './../Models/northwind/orders-type';
+import { Northwind } from './../components/static-data/northwind';
 
 @Injectable({
   providedIn: 'root'

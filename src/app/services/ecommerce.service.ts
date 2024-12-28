@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Observable, take } from 'rxjs';
-import { RevenueType } from '../models/ecommerce/revenue-type';
-import { SalesType } from '../models/ecommerce/sales-type';
+import { RevenueType } from './../Models/ecommerce/revenue-type';
+import { SalesType } from './../Models/ecommerce/sales-type';
 import { ErrorHandlerService } from './error-handler.service';
 
 @Injectable({

@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 import { IGX_CARD_DIRECTIVES, IGX_LIST_DIRECTIVES, IgxAvatarComponent, IgxButtonDirective, IgxOverlayOutletDirective, IgxRippleDirective, IgxToggleActionDirective, IgxToggleDirective } from 'igniteui-angular';
 import { IgxCategoryChartModule, IgxPieChartModule } from 'igniteui-angular-charts';
 import { Subject, takeUntil } from 'rxjs';
-import { RevenueType } from '../models/ecommerce/revenue-type';
-import { SalesType } from '../models/ecommerce/sales-type';
-import { NewProductsType } from '../models/inventory-app/new-products-type';
-import { InventoryAppService } from '../services/inventory-app.service';
-import { ECommerceService } from '../services/ecommerce.service';
+
+import { RevenueType } from '../../Models/ecommerce/revenue-type';
+import { SalesType } from '../../Models/ecommerce/sales-type';
+import { NewProductsType } from '../../Models/inventory-app/new-products-type';
+import { InventoryAppService } from '../../services/inventory-app.service';
+import { ECommerceService } from '../../services/ecommerce.service';
 
 @Component({
   selector: 'app-home',

@@ -1,25 +1,28 @@
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './error-routing/not-found/not-found.component';
-import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component';
-import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { OrdersComponent } from './orders/orders.component';
-import { CustomersComponent } from './customers/customers.component';
-import { SalesComponent } from './sales/sales.component';
-import { ReportsComponent } from './reports/reports.component';
-import { LoginComponent } from './login/login.component';
+import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component'
+import { ProductsComponent } from './components/products/products.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { CustomersComponent } from './components/customers/customers.component';
+import { SalesComponent } from './components/sales/sales.component';
+import { ReportsComponent } from './components/reports/reports.component';
+import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BarcodeComponent } from './barcode/barcode.component';
+import { BarcodeComponent } from './components/barcode/barcode.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
-import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
 
 export const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' }
 ];
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -31,7 +34,6 @@ export const routes: Routes = [
       text: 'Home'
     }
   },
-
   {
     path: 'registration',
     component: RegistrationComponent,
@@ -39,6 +41,16 @@ export const routes: Routes = [
       text: 'Registration'
     }
   },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent,
+    data: {
+      text: 'forgot-password'
+    }
+  },
+  // { path: 'forgot-password', loadComponent: () => import('./components/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent) },
+
+  
   {
     path: 'products',
     component: ProductsComponent,

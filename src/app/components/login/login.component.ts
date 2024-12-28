@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../auth.service';
-import { User } from '../models/User';
+import { AuthService } from '../../auth.service';
+import { User } from '../../Models/User';
 
 @Component({
   selector: 'app-login',
@@ -51,9 +51,15 @@ export class LoginComponent {
         console.error(error);
       }
     );
-    
   }
   register(){
     this.router.navigate(['/registration'])
+  }
+  forgotPassword(): void {
+    // You can navigate to a password reset page or show a modal
+    console.log('Navigating to Forgot Password page');
+    this.router.navigate(['/forgot-password']);
+    // Or if you want to show a modal or a custom message
+    // alert("Please contact support for password recovery.");
   }
 }

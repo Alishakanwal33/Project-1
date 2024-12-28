@@ -28,6 +28,11 @@
       </div>
       <button type="submit" class="btn btn-primary w-100 mb-3 shadow-sm" style="background: linear-gradient(135deg, #4facfe, #00f2fe); border: none;">Login</button>
       <p *ngIf="errorMessage" class="alert alert-danger mt-3 text-center" style="font-size: 0.9rem;">{{ errorMessage }}</p>
+      <div class="text-center mt-2">
+        <a (click)="forgotPassword()" class="btn btn-link" style="color: #007bff; text-decoration: none;">
+          Forgot Password?
+        </a>
+      </div>
       <div class="text-center mt-3">
         <p>Don’t have an account?</p>
         <a (click)="register()" class="btn btn-secondary w-100 shadow-sm" style="background-color: #007bff; color: white; border: none;">

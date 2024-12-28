@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Observable, take } from 'rxjs';
-import { ProductsType } from '../models/inventory-app/products-type';
-import { NewProductsType } from '../models/inventory-app/new-products-type';
+import { ProductsType } from './../Models/inventory-app/products-type';
+import { NewProductsType } from './../Models/inventory-app/new-products-type';
 import { ErrorHandlerService } from './error-handler.service';
 
 @Injectable({

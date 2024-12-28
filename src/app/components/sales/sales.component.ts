@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { IComboSelectionChangingEventArgs, IGX_COMBO_DIRECTIVES, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
 import { IgxCategoryChartModule } from 'igniteui-angular-charts';
 import { Subject, takeUntil } from 'rxjs';
-import { RevenueType } from '../models/ecommerce/revenue-type';
-import { ECommerceService } from '../services/ecommerce.service';
+import { RevenueType } from '../../Models/ecommerce/revenue-type';
+import { ECommerceService } from '../../services/ecommerce.service';
 
 @Component({
   selector: 'app-sales',

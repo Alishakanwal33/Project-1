@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IGX_GRID_DIRECTIVES, IGX_INPUT_GROUP_DIRECTIVES, IgxButtonDirective, IgxIconComponent, IgxOverlayOutletDirective, IgxRippleDirective, IgxToggleActionDirective, IgxToggleDirective } from 'igniteui-angular';
 import { Subject, takeUntil } from 'rxjs';
-import { OrdersType } from '../models/northwind/orders-type';
-import { NorthwindService } from '../services/northwind.service';
+import { OrdersType } from '../../Models/northwind/orders-type';
+import { NorthwindService } from '../../services/northwind.service';
 
 @Component({
   selector: 'app-orders',

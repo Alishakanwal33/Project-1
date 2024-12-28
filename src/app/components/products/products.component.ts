@@ -2,10 +2,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IComboSelectionChangingEventArgs, IGX_CARD_DIRECTIVES, IGX_COMBO_DIRECTIVES, IGX_DIALOG_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES, IGX_INPUT_GROUP_DIRECTIVES, IGX_SELECT_DIRECTIVES, IGX_SIMPLE_COMBO_DIRECTIVES, IgxButtonDirective, IgxCheckboxComponent, IgxIconButtonDirective, IgxIconComponent, IgxOverlayOutletDirective, IgxRippleDirective, IgxToggleActionDirective, IgxToggleDirective } from 'igniteui-angular';
 import { Subject, takeUntil } from 'rxjs';
-import { ProductsType } from '../models/inventory-app/products-type';
-import { SalesType } from '../models/ecommerce/sales-type';
-import { InventoryAppService } from '../services/inventory-app.service';
-import { ECommerceService } from '../services/ecommerce.service';
+import { ProductsType } from '../../Models/inventory-app/products-type';
+import { SalesType } from '../../Models/ecommerce/sales-type';
+import { InventoryAppService } from '../../services/inventory-app.service';
+import { ECommerceService } from '../../services/ecommerce.service';
 
 @Component({
   selector: 'app-products',

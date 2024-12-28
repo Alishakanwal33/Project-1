@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { User } from '../models/User';
+import { User } from '../../Models/User';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../auth.service';
+// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -15,7 +16,7 @@ import { AuthService } from '../auth.service';
   standalone: true,
   imports: [NgIf, FormsModule]
 })
-export class RegistrationComponent {
+export class RegistrationComponent  {
   user: User = new User();
   errorMessage: string = '';
   constructor(

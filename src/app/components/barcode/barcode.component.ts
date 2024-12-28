@@ -2,9 +2,9 @@ import { Component } from '@angular/core'; // Add this import for NgModule
 import { CommonModule } from '@angular/common';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { BarcodeFormat } from '@zxing/library';
-import { AuthService } from '../auth.service';
-import { product } from '../models/User';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../../auth.service';
+import { product } from '../../Models/User';
 
 @Component({
   selector: 'app-barcode',
